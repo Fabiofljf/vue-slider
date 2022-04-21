@@ -15,7 +15,30 @@
 
 <body>
     <div id="app">
+        <div class="container">
+            <img src="./assets/img/01.jpg" alt="Post Svezia">
 
+            <div class="thumbnails">
+                <img src="./assets/img/02.jpg" alt="Post ">
+                <img src="./assets/img/02.jpg" alt="">
+                <img src="./assets/img/02.jpg" alt="">
+                <img src="./assets/img/02.jpg" alt="">
+                <img src="./assets/img/02.jpg" alt="">
+            </div>
+            <!-- /.thumbnails -->
+
+            <div class="navigator">
+                <div class="next" @click="next">
+                    <i class="bg fa-solid fa-chevron-up"></i>
+                </div>
+                <div class="prev" @click="prev">
+                    <i class="bg fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+            <!-- /.navigator -->
+
+        </div>
+        <!-- /.container -->
     </div>
     <!-- /#app - Vue JS -->
 
