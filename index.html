@@ -18,8 +18,9 @@
         <div class="container">
             <img :src="'./assets/' + images[activeImage].image" alt="'Post' + images.title">
 
+
             <div class="thumbnails">
-                <img :src="thumb" class="thumb" :class="activeImage === index ? 'active' : '' " v-for="(thumb, index) in images">
+                <img :src="'./assets/' + thumb.image" class="thumb" :class="activeImage === index ? 'active' : '' " v-for="(thumb, index) in images">
             </div>
             <!-- /.thumbnails -->
 
