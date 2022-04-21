@@ -17,6 +17,10 @@
     <div id="app">
         <div class="container">
             <img :src="'./assets/' + images[activeImage].image" alt="'Post' + images.title">
+            <div class="text_img">
+                <h3>{{images[activeImage].title}}</h3>
+                <p>{{images[activeImage].text}}</p>
+            </div>
 
 
             <div class="thumbnails">
