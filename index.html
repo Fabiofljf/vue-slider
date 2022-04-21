@@ -16,27 +16,30 @@
 <body>
     <div id="app">
         <div class="container">
-            <img :src="'./assets/' + images[activeImage].image" alt="'Post' + images.title">
-            <div class="text_img">
-                <h3>{{images[activeImage].title}}</h3>
-                <p>{{images[activeImage].text}}</p>
+            <div class="container_sx">
+                <img :src="'./assets/' + images[activeImage].image" alt="'Post' + images.title">
+                <div class="text_img">
+                    <h3>{{images[activeImage].title}}</h3>
+                    <p>{{images[activeImage].text}}</p>
+                </div>
             </div>
 
 
             <div class="thumbnails">
                 <img :src="'./assets/' + thumb.image" class="thumb" :class="activeImage === index ? 'active' : '' " v-for="(thumb, index) in images">
+
+                <div class="navigator">
+                    <div class="next" @click="next">
+                        <i class="bg fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="prev" @click="prev">
+                        <i class="bg fa-solid fa-chevron-up"></i>
+                    </div>
+                </div>
+                <!-- /.navigator -->
             </div>
             <!-- /.thumbnails -->
 
-            <div class="navigator">
-                <div class="next" @click="next">
-                    <i class="bg fa-solid fa-chevron-down"></i>
-                </div>
-                <div class="prev" @click="prev">
-                    <i class="bg fa-solid fa-chevron-up"></i>
-                </div>
-            </div>
-            <!-- /.navigator -->
 
         </div>
         <!-- /.container -->

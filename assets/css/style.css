@@ -16,40 +16,50 @@ img {
 
 /* MAIN */
 
-.container {
-    border: 1px solid black;
-    width: 800px;
-    height: 300px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-.container>img {
-    width: 500px;
-    height: 298px;
+.container {
+    border: 1px solid black;
+    width: 1000px;
+    height: 300px;
+    display: flex;
+}
+
+.container_sx {
+    width: 700px;
+    position: relative;
+}
+
+.container_sx>img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
 }
 
 .thumbnails {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    width: 298px;
+    width: 300px;
     height: 298px;
     overflow-y: scroll;
+    position: relative;
 }
 
 .prev {
     position: absolute;
-    top: 0px;
-    right: 130px;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .next {
     position: absolute;
-    bottom: 0px;
-    right: 130px;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .bg {
@@ -69,8 +79,8 @@ img {
 
 .text_img {
     position: absolute;
-    top: 50%;
+    bottom: 30px;
+    right: 10px;
     width: 35%;
-    right: 37%;
     color: #ffffffbf;
 }

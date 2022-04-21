@@ -63,7 +63,6 @@ const app = new Vue({
             }
             this.activeImage--
         },
-
-    }
-
+    },
+    reserve: {}
 })
