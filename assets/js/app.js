@@ -19,6 +19,7 @@ Bonus:
 const app = new Vue({
     el: '#app',
     data: {
+        activeImage: 0,
         images: [{
                 image: 'img/01.jpg',
                 title: 'Svezia',
@@ -44,15 +45,24 @@ const app = new Vue({
                 title: 'Paradise',
                 text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis.',
             }
+
         ]
     },
     methods: {
         next() {
             console.log('next');
+            this.activeImage++
+                if (this.activeImage === this.images.length) {
+                    this.activeImage = 0;
+                }
         },
         prev() {
             console.log('prev');
-        }
+            if (this.activeImage === 0) {
+                this.activeImage = this.images.length - 1;
+            }
+            this.activeImage--
+        },
 
     }
 

@@ -40,13 +40,13 @@ img {
     overflow-y: scroll;
 }
 
-.next {
+.prev {
     position: absolute;
     top: 0px;
     right: 130px;
 }
 
-.prev {
+.next {
     position: absolute;
     bottom: 0px;
     right: 130px;
